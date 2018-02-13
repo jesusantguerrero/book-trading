@@ -1,0 +1,25 @@
+.app-cover {
+  border-bottom: 1px solid red;
+}
+
+.cover-quote {
+  
+}
+
+.cover-quote__title {
+  color: var(--primary-color-dark);
+  font-family: 'PT Sans', sans-serif;
+}
+
+.cover-quote__body {
+  font-family: 'PT Serif', serif;
+}
+
+.btn {
+
+}
+
+.btn.primary-color {
+
+}
+

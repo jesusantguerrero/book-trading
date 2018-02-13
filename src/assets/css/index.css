@@ -1,9 +1,26 @@
 
 @import './bootstrap-reboot.css';
 @import './bootstrap-grid.css';
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif');
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.unsplash-credit {
+  background-color:black;
+  color:white;
+  text-decoration:none;
+  padding:4px 6px;
+  font-family: -apple-system, BlinkMacSystemFont,'San Francisco', 'Helvetica Neue','Helvetica', Ubuntu, Roboto, Noto,Segoe , Arial, sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  line-height:1.2;
+  display: inline-block;
+  border-radius:3px;
 }

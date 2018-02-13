@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './assets/css/App.css';
 import AppHeader from './components/AppHeader';
+import AppCover from './components/AppCover';
 
 class App extends Component {
   state = {
@@ -11,7 +12,8 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader/>
-        Template {this.state.message}
+        <AppCover/>
+         {this.state.message}
       </div>
     );
   }
