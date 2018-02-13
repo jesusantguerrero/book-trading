@@ -1,5 +1,20 @@
 .app-cover {
   border-bottom: 1px solid red;
+  position: relative;
+  background: linear-gradient(90deg, rgba(0,0,0,.7), rgba(0,0,0,.4), rgba(0,0,0,.7))
+
+}
+
+.app-cover::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('./../img/book-background.jpg');
+  background-size: cover;
+  z-index: -1
 }
 
 .cover-quote {
@@ -13,6 +28,8 @@
 
 .cover-quote__body {
   font-family: 'PT Serif', serif;
+  color: white;
+  padding: 20px;
 }
 
 .btn {
