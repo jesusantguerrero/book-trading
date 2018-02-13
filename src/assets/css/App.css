@@ -4,13 +4,16 @@
   padding: 0;
 }
 
+
 :root {
-  --primary-color: #0bbca2;
-  --dark-color: #0bbca2;
+  --primary-color: #ffdc73;
+  --primary-color-dark: #bf9b30;
+  --dark-color: #333;
   --text-title-color: white;
   --text-body-color: #444;
   --text-body-contrast: var(--primary-color)
-}
+  }
+  
 
 .App {
   text-align: center;
