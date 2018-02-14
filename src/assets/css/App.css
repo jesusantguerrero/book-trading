@@ -9,16 +9,19 @@
   --primary-color: #935635;
   --primary-color-light: #c95b20;
   --primary-color-dark: #c95b20;
+  --dark-color: #434a51;
   --contrast-color: #c95b20;
-  --dark-color: #333;
   --text-title-color: white;
   --text-body-color: #444;
   --text-body-contrast: var(--contrast-color);
   --cuero: #fdddca 
   }
   
-
-.App {
+body {
+  background: var(--dark-color);
+  color: white;
+}
+  .App {
   text-align: center;
   width: 100%;
   color: #444;

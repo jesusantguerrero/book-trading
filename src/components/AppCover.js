@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './../assets/img/logo.svg';
+import LoginBox from './LoginBox';
 import './../assets/css/AppCover.css';
 
 const AppCover = props => {
@@ -13,10 +14,11 @@ const AppCover = props => {
             sdakjdkajs dkaj skdj aksjdk asjkdj kasdjkas djkasj dkajs kldj kasj ks aks 
             skjda klsjd aksjd kasjd aksjd ksajdk jaksjdkasj dkjask djkalsjd ksajksdj
           </p>
-          <a className="btn btn-primary"> Search books </a>
+          <a className="btn btn-primary"> Take me to the books </a>
         </div>
 
-        <div className="cover-icon col-md-6">
+        <div className="cover-icon col-md-6 row justify-content-center">
+          <LoginBox/>
         </div>
       
       </div>
