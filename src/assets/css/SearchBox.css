@@ -1,0 +1,25 @@
+.searchbox {
+  background: var(--primary-color-light);
+  height: 32px;
+  display: flex;
+  margin-left: auto;
+  margin-right: 5px;
+  border-radius: 4px;
+  border: 1px solid white;
+  overflow: hidden;
+  opacity: .7;
+}
+
+.searchbox__text {
+  background: var(--primary-color-light);
+  color: white;
+  border: 0;
+}
+
+.searchbox__button {
+  background: var(--primary-color-light);
+  color: white;
+  border: 0;
+  padding: 0 5px;
+  cursor: pointer;
+}

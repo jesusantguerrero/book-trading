@@ -23,3 +23,10 @@ body {
   display: inline-block;
   border-radius:3px;
 }
+
+.btn.btn-primary {
+  background: var(--primary-color-light);
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}

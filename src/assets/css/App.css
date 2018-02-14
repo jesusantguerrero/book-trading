@@ -6,12 +6,15 @@
 
 
 :root {
-  --primary-color: #ffdc73;
-  --primary-color-dark: #bf9b30;
+  --primary-color: #935635;
+  --primary-color-light: #c95b20;
+  --primary-color-dark: #c95b20;
+  --contrast-color: #c95b20;
   --dark-color: #333;
   --text-title-color: white;
   --text-body-color: #444;
-  --text-body-contrast: var(--primary-color)
+  --text-body-contrast: var(--contrast-color);
+  --cuero: #fdddca 
   }
   
 

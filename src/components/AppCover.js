@@ -13,11 +13,10 @@ const AppCover = props => {
             sdakjdkajs dkaj skdj aksjdk asjkdj kasdjkas djkasj dkajs kldj kasj ks aks 
             skjda klsjd aksjd kasjd aksjd ksajdk jaksjdkasj dkjask djkalsjd ksajksdj
           </p>
-          <a className="btn primary-button"> Search books </a>
+          <a className="btn btn-primary"> Search books </a>
         </div>
 
         <div className="cover-icon col-md-6">
-          <img src={logo} alt="main-logo"/>
         </div>
       
       </div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import './../assets/css/AppHeader.css';
+import SearchBox from './SearchBox';
 
 const AppHeader = props => {
   return(
     <header className="app-header">
       <h1 className="app-header__title"> Book-trading</h1>
+      <SearchBox/>
       <nav className="app-nav">
         <li><a href="#" className="app-nav__link">Home</a></li>
         <li><a href="#" className="app-nav__link">Books</a></li>
