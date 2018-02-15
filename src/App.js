@@ -15,6 +15,7 @@ class App extends Component {
         <AppHeader/>
         <AppCover/>
         <AppHome/>
+        <footer> Code and design by @JesusAntGuerrero</footer>
       </div>
     );
   }
