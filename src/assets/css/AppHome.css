@@ -1,0 +1,6 @@
+.app-home {
+  background: white;
+  color: var(--dark-color);
+  padding: 50px ;
+  text-align: left;
+}

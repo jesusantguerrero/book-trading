@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './assets/css/App.css';
 import AppHeader from './components/AppHeader';
 import AppCover from './components/AppCover';
+import AppHome from './components/AppHome';
 
 class App extends Component {
   state = {
@@ -13,7 +14,7 @@ class App extends Component {
       <div className="App">
         <AppHeader/>
         <AppCover/>
-         {this.state.message}
+        <AppHome/>
       </div>
     );
   }
