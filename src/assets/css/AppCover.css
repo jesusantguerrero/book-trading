@@ -26,7 +26,7 @@
 }
 
 .cover-quote__title {
-  color: var(--primary-color-dark);
+  color: var(--light-color);
   font-family: 'PT Sans', sans-serif;
 }
 
