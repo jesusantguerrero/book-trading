@@ -25,6 +25,7 @@ export default class LoginBox extends Component {
             <label> Password</label>
             <input className="form-control" type="password"/>
             </div> 
+            <a className="btn btn-primary"> Login </a>
         </form>
       </div>
     )
