@@ -23,7 +23,7 @@ export default class SearchBar extends Component {
       <form className="inline-form searchbox">
         <div className="input-group">
           <select id={this.props.id} type="search" className="form-control searchbox__text"/>
-          <button className="append-addon searchbox__button">Buscar</button>
+          <button className="append-addon searchbox__button" onClick={this.props.addBook}> + </button>
         </div>
       </form>
     )
