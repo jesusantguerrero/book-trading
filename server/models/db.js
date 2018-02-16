@@ -10,5 +10,4 @@ db.once('open',(e) => {
   console.log(`connected to mongodb in ${process.env.DB_STRING_CONNECTION}`);
 });
 
-
 module.exports = db;

@@ -32,7 +32,8 @@
 }
 
 .book-item__title {
-  color: var(--light-color);
+  font-size: bolder;
+  font-family: 'A'
 }
 
 .book-item__btn {
