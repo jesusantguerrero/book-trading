@@ -6,12 +6,12 @@ const AppHeader = props => {
   return(
     <header className="app-header">
       <h1 className="app-header__title"> Book-trading</h1>
-      <SearchBox id="main-search" action={props.setBook} addBook={props.addBook}/>
+      <SearchBox id="main-search" action={props.action} addBook={props.addBook}/>
       <nav className="app-nav">
         <li><a href="#" className="app-nav__link">Home</a></li>
         <li><a href="#" className="app-nav__link">Books</a></li>
         <li><a href="#" className="app-nav__link">My Books</a></li>
-        <li><a href="#" className="app-nav__link">Login</a></li>
+        <li><a href="#" className="app-nav__link"> User Name</a></li>
       </nav>
 
       <div className="user-info">

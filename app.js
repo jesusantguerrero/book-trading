@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 const db = require('./server/models/db');
 
 const index = require('./server/routes/index');
-const stocks = require('./server/routes/stocks');
+const books = require('./server/routes/books');
 
 const app = express();
 
@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/', index);
-app.use('/stocks', stocks);
+app.use('/books', books);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import jquery from 'jquery';
 const $ = jquery;
 import 'select2/';
-import 'select2/dist/css/select2.css'
+import './../../node_modules/select2/dist/css/select2.css'
 import './../assets/css/SearchBox.css';
 
 window.$ = window.jQuery = jquery;
@@ -33,6 +33,8 @@ export default class SearchBar extends Component {
     const self = this;
     const sel = $(`#${this.props.id}`).select2({
       ajax: {
+        witdh: '100%',
+        height: '100%',
         url: 'https://www.googleapis.com/books/v1/volumes',
         dataType: 'json',
         delay: 250,
@@ -51,7 +53,7 @@ export default class SearchBar extends Component {
     const results = data.items.map((item) => {
       return { 
         id: item.id,
-        text: item.volumeInfo.title 
+        text: item.volumeInfo.title
       }
     });
 
