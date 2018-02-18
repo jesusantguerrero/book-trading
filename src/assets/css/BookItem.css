@@ -6,7 +6,7 @@
 
 .book-item {
   border: 1px solid #ccc;
-  width: 45%;
+  width: 350px;
   display: flex;
   flex-wrap: wrap;
   margin: 7px 0;
@@ -29,6 +29,7 @@
 }
 .book-item__body {
   padding: 15px;
+  width: 175px;
 }
 
 .book-item__title {
