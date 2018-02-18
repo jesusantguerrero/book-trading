@@ -3,11 +3,10 @@ const mongoose = require('mongoose');
 class Book {
   constructor() {
     this.model = mongoose.model('books', new mongoose.Schema({
-      BookId: String,
+      id: String,
       title: String,
       owner: String,
-      description: String,
-      authors: [],
+      volumeInfo: Object,
       requests: []
     }))
   }  

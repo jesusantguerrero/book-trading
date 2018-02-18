@@ -29,7 +29,7 @@ class App extends Component {
   _addBook = (e) => {
     e.preventDefault();
     if (this.state.newBook) {
-      const data = `data=${JSON.stringify(this.state.newBook)}`;
+      const data = `bookId=${this.state.newBook.id}`;
       axios.post('/books/add/1', data)
         .then((res) => {
           if (res.data) {
