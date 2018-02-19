@@ -20,18 +20,12 @@ export default class AppHome extends Component {
   }
 
   renderList() {
-    let rendered = [];
     const { limit, books } = this.props;
 
     if ( limit && (books.length < limit)) {
-      rendered = books.map((item) => {
-        return (<BookItem item={item}/>)
-      })
+      return books.map((item) =>  (<BookItem item={item}/>))
     } else {
-      rendered = books.slice(0, this.props.limit).map((item) => {
-        return (<BookItem item={item}/>)
-      })
+      return books.slice(0, this.props.limit).map((item) => (<BookItem item={item}/>))
     }
-    return rendered;
   }
 }
