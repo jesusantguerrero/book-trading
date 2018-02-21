@@ -1,9 +1,10 @@
 .loginbox {
   min-height: 300px;
+  transition: all ease-in .3s;
+  padding-bottom: 25px;
 }
 
 .loginbox__header {
-  background: red;
   display: flex;
   margin-bottom: 20px;
 }
@@ -13,6 +14,11 @@
   height: 42px;
   background: #ccc;
   border: 0;
+}
+
+.loginbox__tab:active ,
+.loginbox__tab:focus {
+  outline: none;
 }
 
 .loginbox__tab.active {

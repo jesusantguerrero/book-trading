@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 class Book {
   constructor() {
-    this.model = mongoose.model('books', new mongoose.Schema({
+    this.model = mongoose.model('book', new mongoose.Schema({
       id: String,
       title: String,
       owner: String,

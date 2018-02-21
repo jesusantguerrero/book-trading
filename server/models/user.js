@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const encrypter = require('./../utils/encripter');
+const encrypter = require('./../utils/encrypter');
 
 class User {
   constructor() {
@@ -13,7 +13,7 @@ class User {
   }  
 
   register(newUser) {
-    this.model.find({ email: newUser.email })
+    return this.model.find({ email: newUser.email })
       .then((found) => {
         if (!found) {
           return false;

@@ -10,7 +10,7 @@ const BookItem = props => {
   return(
     <div className="book-item">
       <div className="book-item__image">
-        <img src={info.imageLinks.thumbnail} alt="book-image"/>
+        <img src={info.imageLinks.thumbnail} alt="book"/>
       </div>
       <div className="book-item__body">
         <h4 className="book-item__title"> {info.title} </h4>
