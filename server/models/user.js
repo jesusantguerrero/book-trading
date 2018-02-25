@@ -16,9 +16,9 @@ class User {
     return this.model.find({ email: newUser.email })
       .then((found) => {
         if (!found) {
-          return false;
-        } else {
           return this.createUser(newUser);
+        } else {
+          return false;
         }
       });
   }

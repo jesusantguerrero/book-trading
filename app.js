@@ -7,9 +7,11 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+// const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const db = require('./server/models/db');
+const passport = require('./server/utils/passport');
 
 const auth = require('./server/routes/auth');
 const books = require('./server/routes/books');
@@ -28,6 +30,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'build')));
+
+// app.use(session({ secret: 'book-trading' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 
 app.use('/', index);
 app.use('/books', books);

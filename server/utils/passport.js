@@ -16,4 +16,35 @@ passport.use(new LocalStrategy((email, password, done) => {
   }
 ));
 
+passport.use('local-singup', new LocalStrategy({
+  usernameField: 'email',
+  passwordField: 'password',
+  passReqToCallback: true
+
+}, (req, email, password, done)=> {
+  process.nextTick(() => {
+    User.register({ email, password })
+      .then((user) => {
+        if(user) {
+          return done(null, false);
+        } else {
+          return done(null, user);
+        }
+      })
+  })
+}))
+
+
+passport.serializeUser((user, done)  => {
+  done(null, user.id);
+});
+
+// used to deserialize the user
+passport.deserializeUser((id, done) => {
+  User.model.findById(id, (err, user) => {
+      done(err, user);
+  });
+});
+
+
 module.exports = passport;
