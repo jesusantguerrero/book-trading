@@ -1,0 +1,44 @@
+.app-header {
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  padding: 0 50px;
+  height: 60px;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+
+.app-header__title {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 22px;
+}
+
+.app-nav {
+  display: flex;
+  height: 100%;
+  align-self: flex-end;
+  align-items: center;
+}
+
+.app-nav li {
+  list-style: none;
+  height: 32px
+}
+
+.app-nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  transition: all ease .3s;
+  border-radius: 2px;
+}
+
+.app-nav__link:hover{
+  background: var(--primary-color-dark);
+  text-decoration: none;
+  color: white;
+}

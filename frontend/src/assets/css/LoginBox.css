@@ -1,0 +1,34 @@
+.loginbox {
+  min-height: 300px;
+  transition: all ease-in .3s;
+  padding-bottom: 25px;
+}
+
+.loginbox__header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.loginbox__tab {
+  width: 100%;
+  height: 42px;
+  background: #ccc;
+  border: 0;
+}
+
+.loginbox__tab:active ,
+.loginbox__tab:focus {
+  outline: none;
+}
+
+.loginbox__tab.active {
+  background: white;
+  color: var(--primary-color-light);
+  font-weight: bolder;
+  border-bottom: 2px solid var(--primary-color-light)
+}
+
+.loginbox__body {
+  padding: 0 15px;
+  text-align: left;
+}
