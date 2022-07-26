@@ -1,17 +1,16 @@
 
-if (process.env.NODE_ENV !== 'production') {
 require('dotenv').config();
-}
+require('./server/models/db');
   
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-// const session = require('express-session');
+const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const db = require('./server/models/db');
 const passport = require('./server/utils/passport');
+const cors = require('cors');
 
 const auth = require('./server/routes/auth');
 const books = require('./server/routes/books');
@@ -19,25 +18,22 @@ const index = require('./server/routes/index');
 
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(bodyParser.json());
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'build')));
 
-// app.use(session({ secret: 'book-trading' })); // session secret
+app.use(session({ secret: 'book-trading', resave: true, saveUninitialized: true })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 app.use('/', index);
-app.use('/books', books);
-app.use('/auth', auth);
+app.use('/v1/books', books);
+app.use('/v1/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,7 +50,8 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  console.log(err)
+  res.end('error', err);
 });
 
 module.exports = app;

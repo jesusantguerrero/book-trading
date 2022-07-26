@@ -1,0 +1,42 @@
+.searchbox {
+  background: var(--primary-color-light);
+  height: 32px;
+  width: 200px;
+  display: flex;
+  margin-left: auto;
+  margin-right: 5px;
+  border-radius: 4px;
+  border: 1px solid white;
+  overflow: hidden;
+  opacity: .7;
+}
+.searchbox:hover {
+  opacity: 1;
+}
+
+.searchbox__text {
+  background: var(--primary-color-light);
+  border: 0;
+  width: 80% !important;
+  height: 100%;
+  color: #333;
+}
+
+.searchbox__button {
+  background: var(--primary-color-light);
+  color: white;
+  border: 0;
+  padding: 0 5px;
+  cursor: pointer;
+  width: 40px;
+}
+.searchbox__button:hover {
+  background: white;
+  color: var(--primary-color-light);
+}
+
+span.select2-selection.select2-selection--single {
+    border-radius: 0;
+    height: 100%;
+    border: 0;
+}
