@@ -3,7 +3,7 @@ const encrypter = require('./../utils/encrypter');
 
 class User {
   constructor() {
-    this.model = mongoose.model('books', new mongoose.Schema({
+    this.model = mongoose.model('users', new mongoose.Schema({
       email: String,
       password: String,
       fullname: String,
@@ -13,7 +13,7 @@ class User {
   }  
 
   register(newUser) {
-    return this.model.find({ email: newUser.email })
+    return this.model.findOne({ email: newUser.email })
       .then((found) => {
         if (!found) {
           return this.createUser(newUser);

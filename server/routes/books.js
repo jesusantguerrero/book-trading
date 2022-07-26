@@ -3,12 +3,14 @@ const axios = require('axios');
 const router =  express.Router();
 const Book = require('./../models/book');
 
-router.get('/', (req, res) => {
-  Book.model.find()
-    .then((books) => {
-      res.json(books)
-    })
-    .catch((err) => console.log(err))
+router.get('/', async (req, res) => {
+  try {
+    const books = await Book.model.find()
+    res.json(books)
+  } catch (err) {
+    res.sendStatus(404);
+    return res.end();
+  }
 });
 
 router.get('/delete', (req, res) => {
